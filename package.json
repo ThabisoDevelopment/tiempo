@@ -2,9 +2,12 @@
   "name": "tiempo",
   "version": "0.0.1",
   "description": "date and time format",
-  "main": "src/index.js",
+  "main": "dist/index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel src/ -d dist",
+    "dev": "node src/index.mjs",
+    "test": "node test/index.mjs"
   },
   "repository": {
     "type": "git",
@@ -21,5 +24,10 @@
   "bugs": {
     "url": "https://github.com/ThabisoDevelopment/tiempo/issues"
   },
-  "homepage": "https://github.com/ThabisoDevelopment/tiempo#readme"
+  "homepage": "https://github.com/ThabisoDevelopment/tiempo#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.17.10",
+    "@babel/preset-env": "^7.17.10"
+  }
 }
